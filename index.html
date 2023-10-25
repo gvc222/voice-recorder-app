@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- importing microphone button from google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +13,13 @@
 </head>
 <body>
     <main>
-        <h1>Sing here and download your beautiful voice!</h1>
+        <h1>Sing here and download* your beautiful voice!</h1>
         <button class="mic-toggle" id="mic">
             <span class="material-icons">mic</span>
         </button>
-
+        <!-- adding controls to audio element enables playback -->
         <audio class="playback" controls></audio>
+        <footer style="color: white; font-family: 'Montserrat', 'sans-serif'">*Downloading only works in desktop for now.</footer>
     </main>
 
     <script src="index.js"></script>

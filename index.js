@@ -1,13 +1,18 @@
+// Grab element with id #mic, you could use getElementById
 const mic_btn = document.querySelector("#mic");
+// Grab element with class .playback
 const playback = document.querySelector(".playback");
 
+//add Event listener for when the element with #mic is clicked, performs ToggleMic function upon click
 mic_btn.addEventListener("click", ToggleMic);
 
+// Initialize if mic is allowed to record
 let can_record = false;
+// Initializes so mic is not recording upon start
 let is_recording = false;
-
+// Initializes recorder to be doing nothing at the beginning
 let recorder = null;
-
+// Initializes chunks
 let chunks = [];
 
 function SetupAudio() {

@@ -132,3 +132,13 @@ h1 {
     color: white;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }
+
+footer {
+    font-family: 'Montserrat', 'sans-serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+}

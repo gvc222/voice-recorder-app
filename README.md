@@ -1,4 +1,6 @@
 # Voice Recorder App
+App is made for desktop, will add mobile version in the future
+
 
 # App deployed using Netlify: https://statuesque-tiramisu-c3ee40.netlify.app/
 

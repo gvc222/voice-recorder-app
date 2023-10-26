@@ -12,13 +12,16 @@ let can_record = false;
 let is_recording = false;
 // Initializes recorder to be doing nothing at the beginning
 let recorder = null;
-// Initializes chunks
+// Initializes chunks of data
 let chunks = [];
 
 function SetupAudio() {
-    console.log("Setup")
+    // console.log("Setup")
+    // checks if user has media devices
+    // For more info: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices
+        // getUserMedia asks user for permission, in this case for audio device (microphone access)
             .getUserMedia({
                 audio: true
             })
@@ -36,10 +39,14 @@ function SetupStream(stream) {
     }
 
     recorder.onstop = (e) => {
-        const blob = new Blob(chunks, { type: "audio/mp3; codecs=opus" });
+        const blob = new Blob(chunks, { type: "audio/mp3 codecs=opus" });
         chunks = [];
         const audioURL = window.URL.createObjectURL(blob);
         playback.src = audioURL;
+
+        const downloadLink = document.getElementById('download');
+        downloadLink.href = audioURL;
+        downloadLink.download = 'audio.mp3';
     }
     can_record = true;
 }

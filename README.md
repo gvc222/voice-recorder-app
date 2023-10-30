@@ -1,10 +1,9 @@
 # Voice Recorder App
-App is made for desktop, will add mobile version in the future
+App deployed using Netlify: https://statuesque-tiramisu-c3ee40.netlify.app/
 
+![Voice Recorder App](https://github.com/gvc222/voice-recorder-app/blob/mobile-version/assets/Voice%20Recorder.png?raw=true "Voice Recorder App")
 
-# App deployed using Netlify: https://statuesque-tiramisu-c3ee40.netlify.app/
-
-
+## Instructions
 1. Press the record button to start recording
 2. Sing to your heart's content
 3. Press the record button to stop recording
